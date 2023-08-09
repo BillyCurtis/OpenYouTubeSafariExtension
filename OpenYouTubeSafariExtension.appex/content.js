@@ -10,6 +10,8 @@ function afterNavigate() {
     var locationArr = window.location.pathname.split("/").reverse()
     if (locationArr.includes("watch")) {
         window.location.href = `youtube://watch${window.location.search}`
+    } else if (locationArr.includes("live")) {
+        window.location.href = `youtube://live/${locationArr[0]}`
     } else if (locationArr.includes("shorts")) {
         window.location.href = `youtube://shorts/${locationArr[0]}`
     } else if (locationArr.includes("clip")) {
